@@ -52,6 +52,20 @@ The keyboard controller then encodes the keycode for transport to the computer.
 This is now almost universally over a Universal Serial Bus (USB) or Bluetooth
 connection, but historically has been over PS/2 or ADB connections.
 
+Here is a brief summary of my own article
+This is a detailed breakdown of what happens when you type a URL into your browser's address bar and press enter. Here's a summary of the key steps involved:
+
+User Input: You type the URL (e.g., google.com) and press Enter.
+Keyboard Processing: The keystroke is registered by the operating system, which translates it into a signal for the browser.
+URL Parsing: The browser breaks down the URL into its components like protocol (http/https), hostname (google.com), and path (resource requested, often "/").
+DNS Lookup: The browser checks its cache or queries a DNS server to translate the hostname (google.com) into an IP address (a numerical address that identifies the server).
+Opening a Socket: The browser establishes a connection with the server using the IP address and the appropriate port number (default for HTTP is 80, HTTPS is 443).
+TLS Handshake (HTTPS only): If HTTPS is used, an encrypted communication channel is established between the browser and the server.
+Sending HTTP Request: The browser sends an HTTP request message to the server, specifying the desired action (GET) and the resource (/)
+Server Response: The server processes the request, retrieves the requested resource (e.g., HTML file), and sends a response back to the browser.
+Parsing and Rendering: The browser parses the received data (HTML, CSS, JavaScript) and builds a visual representation of the webpage on the screen.
+This is a simplified overview, and many other details occur behind the scenes, like handling errors, managing multiple resources, and implementing security measures. The provided repository offers a comprehensive exploration of these intricacies.
+
 *In the case of the USB keyboard:*
 
 - The USB circuitry of the keyboard is powered by the 5V supply provided over
